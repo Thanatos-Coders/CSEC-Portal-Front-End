@@ -133,7 +133,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 variant="outline"
                 size="lg"
                 onClick={() => setTheme("light")}
-                className="flex h-10 w-20 rounded-md items-center justify-center bg-[#003087]"
+                className="flex h-10 w-20 rounded-md items-center justify-center bg-[#003087] cursor-pointer hover:bg-[#002f87a2]"
                 aria-label="Light mode"
               >
                 <Sun className="h-4 w-4" color="#F8F8F8"/>
