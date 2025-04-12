@@ -34,49 +34,57 @@ import { DashboardIcon } from "./icons/dashboard-icon";
 const navigationItems = [
   {
     title: "Dashboard",
-    icon: DashboardIcon, // Using our custom dashboard icon
+    icon: DashboardIcon,
     url: "/dashboard",
     isActive: true,
   },
   {
     title: "All Members",
     icon: Users,
-    url: "#",
+    url: "/dashboard/allmembers",
+    isActive: false,
   },
   {
     title: "All Divisions",
     icon: Layers,
     url: "#",
+    isActive: false,
   },
   {
     title: "Attendance",
     icon: ClipboardCheck,
     url: "#",
+    isActive: false,
   },
   {
     title: "Sessions & Events",
     icon: Calendar,
     url: "#",
+    isActive: false,
   },
   {
     title: "Resources",
     icon: FolderOpen,
     url: "#",
+    isActive: false,
   },
   {
     title: "Profile",
     icon: User,
     url: "#",
+    isActive: false,
   },
   {
     title: "Administration",
     icon: ShieldCheck,
     url: "#",
+    isActive: false,
   },
   {
     title: "Settings",
     icon: Settings,
     url: "#",
+    isActive: false,
   },
 ];
 

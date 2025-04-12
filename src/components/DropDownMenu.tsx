@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import DownArrow from "../../src/public/img/DownArrow.png";
+import DownArrow from "@/public/img/DownArrow.png";
 import Img from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -27,7 +27,7 @@ export default function DropDownMenu() {
           className="flex w-46 h-12 border-1 border-gray-200 rounded-[8px]"
         >
           <div className="flex">
-            <div className="flex w-auto items-center" style={{padding: "4px"}}>
+            <div className="flex w-auto items-center" style={{padding: "2px"}}>
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
@@ -48,7 +48,7 @@ export default function DropDownMenu() {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel></DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+        <DropdownMenuRadioGroup>
           <DropdownMenuRadioItem value="top">My Profile</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="bottom">logout</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
