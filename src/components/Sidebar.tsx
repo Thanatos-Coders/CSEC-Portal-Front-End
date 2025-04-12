@@ -34,49 +34,57 @@ import { DashboardIcon } from "./icons/dashboard-icon";
 const navigationItems = [
   {
     title: "Dashboard",
-    icon: DashboardIcon, // Using our custom dashboard icon
+    icon: DashboardIcon,
     url: "/dashboard",
     isActive: true,
   },
   {
     title: "All Members",
     icon: Users,
-    url: "#",
+    url: "/dashboard/allmembers",
+    isActive: false,
   },
   {
     title: "All Divisions",
     icon: Layers,
     url: "#",
+    isActive: false,
   },
   {
     title: "Attendance",
     icon: ClipboardCheck,
     url: "#",
+    isActive: false,
   },
   {
     title: "Sessions & Events",
     icon: Calendar,
     url: "#",
+    isActive: false,
   },
   {
     title: "Resources",
     icon: FolderOpen,
     url: "#",
+    isActive: false,
   },
   {
     title: "Profile",
     icon: User,
     url: "#",
+    isActive: false,
   },
   {
     title: "Administration",
     icon: ShieldCheck,
     url: "#",
+    isActive: false,
   },
   {
     title: "Settings",
     icon: Settings,
     url: "#",
+    isActive: false,
   },
 ];
 
@@ -125,7 +133,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 variant="outline"
                 size="lg"
                 onClick={() => setTheme("light")}
-                className="flex h-10 w-20 rounded-md items-center justify-center bg-[#003087]"
+                className="flex h-10 w-20 rounded-md items-center justify-center bg-[#003087] cursor-pointer hover:bg-[#002f87a2]"
                 aria-label="Light mode"
               >
                 <Sun className="h-4 w-4" color="#F8F8F8"/>

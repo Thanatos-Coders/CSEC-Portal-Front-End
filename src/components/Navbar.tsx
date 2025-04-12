@@ -41,10 +41,10 @@ export default function Navbar({ name, time }: NavbarProps) {
       </div>
 
       <div className="flex gap-4 w-1/2 justify-center items-center ">
-        <div className="flex justify-center gap-1 border-1 border-gray-200 rounded-[8px] h-12 items-center p-2 ml-5">
+        <div className="flex justify-center gap-1 border-1 border-gray-200 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
           <LuSearch size={45} style={{padding: "10px"}}/>
           <div>
-            <Input type="text" placeholder="Search" />
+            <Input type="text" placeholder="Search" className="outline-none border-0 shadow-none focus:outline-0 focus:border-0 focus:shadow-none"/>
           </div>
         </div>
 

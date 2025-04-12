@@ -1,10 +1,10 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import  { zodResolver }  from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import * as checkbox from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import Logo from "../../components/icons/Logoipsum.png";
@@ -93,7 +93,7 @@ export default function LoginPage() {
           <div className="space-y-8 pt-3">
             
             <div className="flex items-center space-x-2">
-              <Checkbox 
+              <checkbox.Checkbox 
                 id="remember" 
                 {...register("remember")} 
               />
