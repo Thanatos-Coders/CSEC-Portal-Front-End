@@ -35,7 +35,7 @@ const navigationItems = [
   {
     title: "Dashboard",
     icon: DashboardIcon, // Using our custom dashboard icon
-    url: "#",
+    url: "/dashboard",
     isActive: true,
   },
   {
