@@ -17,7 +17,7 @@ export default function DashboardLayout({
             <AppSidebar />
             <main className="w-full h-full">
               <div className="flex space-x-6 items-center ">
-                <SidebarTrigger style={{ marginLeft: "3px" }} />
+                <SidebarTrigger style={{ marginLeft: "10px" }} />
                 <Navbar name="Henok" />
               </div>
               {children}

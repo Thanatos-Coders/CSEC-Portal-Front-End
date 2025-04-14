@@ -60,7 +60,7 @@ export function AddMemberDialog() {
       <DialogTrigger asChild>
         <Button
           variant="default"
-          className="flex bg-[#003087] text-white h-12 w-32 items-center justify-center cursor-pointer hover:bg-[#002f87a2]"
+          className="flex rounded-md bg-[#003087] text-white h-12 w-32 items-center justify-center cursor-pointer hover:bg-[#002f87a2]"
         >
           <div className="flex gap-1 items-center justify-center">
             <MdAddCircleOutline size={50} />
@@ -136,7 +136,7 @@ export function AddMemberDialog() {
             </div>
             <Button
               onClick={generateRandomPassword}
-              className="flex text-shadow-white w-20 h-11 shrink-0 cursor-pointer bg-[#003087] hover:bg-[#002f87a2]"
+              className="flex rounded-md text-white w-20 h-11 shrink-0 cursor-pointer bg-[#003087] hover:bg-[#002f87a2]"
               style={{ padding: "5px" }}
             >
               Generate

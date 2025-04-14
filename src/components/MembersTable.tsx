@@ -1,27 +1,38 @@
-"use client"
+"use client";
 
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 export interface Member {
-  id: string
-  name: string
-  avatar?: string
-  attendance: "Active" | "Inactive" | "Needs Attention"
-  year: string
-  status: "OnCampus" | "OffCampus" | "Withdrawn"
+  id: string;
+  name: string;
+  avatar?: string;
+  attendance: "Active" | "Inactive" | "Needs Attention";
+  year: string;
+  status: "OnCampus" | "OffCampus" | "Withdrawn";
 }
 
 interface MembersTableProps {
-  members: Member[]
-  className?: string
+  members: Member[];
+  className?: string;
 }
 
 export function MembersTable({ members, className }: MembersTableProps) {
   return (
-    <div className={cn("rounded-lg border overflow-hidden", className)}  style={{ padding: "10px", margin: "5px" }}>
+    <div
+      className={cn("rounded-lg border overflow-hidden", className)}
+      style={{ padding: "10px", margin: "5px" }}
+    >
       <Table>
         <TableHeader>
           <TableRow>
@@ -34,11 +45,25 @@ export function MembersTable({ members, className }: MembersTableProps) {
         </TableHeader>
         <TableBody>
           {members.map((member) => (
-            <TableRow key={member.id}>
+            <TableRow
+              key={member.id}
+              onClick={() => {
+                const router = useRouter();
+                router.push(`/dashboard/allmembers/member`);
+              }}
+            >
               <TableCell>
-                <div className="flex items-center gap-3" style={{ padding: "10px"}}>
+                <div
+                  className="flex items-center gap-3"
+                  style={{ padding: "10px" }}
+                >
                   <Avatar>
-                    <AvatarImage src={member.avatar || "/placeholder.svg?height=40&width=40"} alt={member.name} />
+                    <AvatarImage
+                      src={
+                        member.avatar || "/placeholder.svg?height=40&width=40"
+                      }
+                      alt={member.name}
+                    />
                     <AvatarFallback>{getInitials(member.name)}</AvatarFallback>
                   </Avatar>
                   <span>{member.name}</span>
@@ -51,13 +76,17 @@ export function MembersTable({ members, className }: MembersTableProps) {
               <TableCell>{member.year}</TableCell>
               <TableCell>
                 <Badge
-                  variant={member.status === "OnCampus" ? "outline" : "secondary"}
+                  variant={
+                    member.status === "OnCampus" ? "outline" : "secondary"
+                  }
                   className={cn(
-                    member.status === "OnCampus" && "text-green-500 bg-green-50",
+                    member.status === "OnCampus" &&
+                      "text-green-500 bg-green-50",
                     member.status === "OffCampus" && "text-red-500 bg-red-50",
-                    member.status === "Withdrawn" && "text-purple-500 bg-purple-100",
+                    member.status === "Withdrawn" &&
+                      "text-purple-500 bg-purple-100"
                   )}
-                  style={{ padding: "5px"}}
+                  style={{ padding: "5px" }}
                 >
                   {member.status}
                 </Badge>
@@ -67,7 +96,7 @@ export function MembersTable({ members, className }: MembersTableProps) {
         </TableBody>
       </Table>
     </div>
-  )
+  );
 }
 
 function AttendanceBadge({ status }: { status: string }) {
@@ -78,13 +107,13 @@ function AttendanceBadge({ status }: { status: string }) {
         "font-normal",
         status === "Active" && "text-green-500 bg-green-50",
         status === "Inactive" && "text-red-500 bg-red-50",
-        status === "Needs Attention" && "text-amber-500 bg-amber-50",
+        status === "Needs Attention" && "text-amber-500 bg-amber-50"
       )}
-      style={{ padding: "5px"}}
+      style={{ padding: "5px" }}
     >
       {status}
     </Badge>
-  )
+  );
 }
 
 function getInitials(name: string) {
@@ -93,5 +122,5 @@ function getInitials(name: string) {
     .map((part) => part[0])
     .join("")
     .toUpperCase()
-    .substring(0, 2)
+    .substring(0, 2);
 }
