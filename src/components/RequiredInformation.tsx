@@ -1,9 +1,9 @@
 export function RequiredInformation() {
   return (
     <div>
-      <div className="flex flex-wrap gap-6" style={{marginTop: "10px"}}>
+      <div className="flex flex-wrap gap-8" style={{marginTop: "10px"}}>
         {/* Left Column */}
-        <div className="flex-1 min-w-[250px]">
+        <div className="flex-1 min-w-[250px] flex flex-col gap-4">
           <div className="flex flex-col gap-1" style={{ marginBottom: "20px" }}>
             <span className="text-sm font-medium text-gray-500">
               First Name
@@ -55,7 +55,7 @@ export function RequiredInformation() {
         </div>
 
         {/* Right Column */}
-        <div className="flex-1 min-w-[250px]">
+        <div className="flex-1 min-w-[250px] flex flex-col gap-4">
           <div className="flex flex-col gap-1" style={{ marginBottom: "20px" }}>
             <span className="text-sm font-medium text-gray-500">Last Name</span>
             <span className="text-gray-800 font-medium">Assefa</span>

@@ -98,7 +98,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       style={{ padding: "25px" }}
     >
       <div
-        className="bg-[#34495E0D] rounded-2xl w-55 h-auto"
+        className="bg-[#34495E0D] rounded-2xl w-58 h-auto"
         
       >
         <SidebarHeader className="p-10" style={{ paddingTop: "30px" }}>
