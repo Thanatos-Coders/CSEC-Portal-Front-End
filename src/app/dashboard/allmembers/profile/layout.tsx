@@ -10,7 +10,7 @@ export default function UserLayout({
     <html lang="en">
       <body className="flex flex-col w-full h-full gap-3">
         <ProfileHeader />
-        <div className="flex" style={{marginTop: "15px", marginBottom: "15px"}}>
+        <div className="flex">
           <div>
             <ProfileSidebar />
           </div>

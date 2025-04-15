@@ -8,13 +8,15 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Logo from '@/components/icons/Logoipsum.png'
+import Logo from '@/components/icons/images/Logoipsum.png'
+import { useRouter } from 'next/navigation'
 
 export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
+  const router = useRouter();
 
   return (
-    <div className="flex flex-col mx-auto w-full max-w-md space-y-6 p-6 gap-5">
+    <div className="flex flex-col mx-auto w-100 max-w-md space-y-6 p-6">
       <div className="flex items-center space-x-2">
         <Image src={Logo} alt="Logoipsum" className="h-8 w-55" />
       </div>
@@ -24,12 +26,12 @@ export function LoginForm() {
         <p className="text-sm text-muted-foreground">Please login here</p>
       </div>
 
-      <form className="flex flex-col gap-3 space-y-4">
+      <form className="flex flex-col space-y-4">
         <div className="space-y-2">
           <Label htmlFor="email" className="text-[#0a2463] font-medium">
             Email Address
           </Label>
-          <Input id="email" type="email" placeholder="robertallen@example.com" className="p-2 focus:border-[#003081] focus:outline-none" style={{padding: "5px"}}/>
+          <Input id="email" type="email" placeholder="robertallen@example.com" className="p-5 focus:border-[#003081] focus:outline-none"/>
         </div>
 
         <div className="space-y-2">
@@ -58,7 +60,13 @@ export function LoginForm() {
           </Label>
         </div>
 
-        <Button type="submit" className="w-full h-10 rounded-[8px] text-white bg-[#0a2463] hover:bg-[#0a2463]/90">
+        <Button
+          type="button"
+          className="w-full h-10 rounded-[8px] text-white bg-[#0a2463] hover:bg-[#0a2463]/90"
+          onClick={() => {
+            router.push('/dashboard');
+          }}
+        >
           Login
         </Button>
       </form>
