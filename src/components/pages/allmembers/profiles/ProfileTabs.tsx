@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { RequiredInformation } from "@/components/RequiredInformation";
-import { OptionalInformation } from "@/components/OptionalInformation";
-import { Resources } from "@/components/ProfileResources";
+import { RequiredInformation } from "@/components/pages/allmembers/profiles/RequiredInformation";
+import { OptionalInformation } from "@/components/pages/allmembers/profiles/OptionalInformation";
+import { Resources } from "@/components/pages/allmembers/profiles/ProfileResources";
 import { FileText, User, BookOpen } from "lucide-react";
 
 export function ProfileTabs() {
