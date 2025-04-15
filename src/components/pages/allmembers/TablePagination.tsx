@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import DownArrow from "@/public/img/DownArrow.png";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
 import Img from "next/image";
 
 interface TablePaginationProps {

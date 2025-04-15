@@ -1,8 +1,8 @@
 "use client";
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/Sidebar";
-import Navbar from "@/components/Navbar";
+import { AppSidebar } from "@/components/layout/Sidebar";
+import Navbar from "@/components/layout/navbar/Navbar";
 
 export default function DashboardLayout({
   children,

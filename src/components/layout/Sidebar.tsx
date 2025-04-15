@@ -28,7 +28,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { DashboardIcon } from "./icons/dashboard-icon";
+import { DashboardIcon } from "../icons/dashboard-icon";
 
 // Navigation items matching the design
 const navigationItems = [

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { MembersTable, type Member } from "@/components/MembersTable";
-import { TableFilter } from "@/components/TableFilter";
-import { TablePagination } from "@/components/TablePagination";
+import { MembersTable, type Member } from "@/components/pages/allmembers/MembersTable";
+import { TableFilter } from "@/components/pages/allmembers/TableFilter";
+import { TablePagination } from "@/components/pages/allmembers/TablePagination";
 
 // Sample data
 const sampleMembers: Member[] = [
