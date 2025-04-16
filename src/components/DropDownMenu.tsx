@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import DownArrow from"@public/img/DownArrow.png";
+import DownArrow from"../../public/img/DownArrow.png";
   
 
 import Image from "next/image";

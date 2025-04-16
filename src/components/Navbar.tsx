@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import ShakeHand from "../../src/public/img/ShakeHand.png";
+import ShakeHand from "../../public/img/ShakeHand.png";
 import { Input } from "@/components/ui/input";
 import { LuSearch } from "react-icons/lu";
 import { GoBell } from "react-icons/go";
@@ -22,9 +22,9 @@ export default function Navbar({ name, time }: NavbarProps) {
   };
 
   return (
-    <div className="flex h-20 w-full justify-between items-center p-4 ml-50">
+    <div className="flex h-20 w-full justify-between items-center p-4">
       <div className=" pl-5 " style={{paddingLeft: "5px"}} >
-        <div className="flex gap-3 ml-5">
+        <div className="flex gap-3">
           <div>
             <div className="flex gap-1">
               <h1 className="text-lg font-semibold">Hello {name}</h1>

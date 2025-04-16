@@ -42,7 +42,7 @@ export function LoginForm() {
   }
 
   return (
-    <div className="flex flex-col mx-auto w-full max-w-md space-y-6 p-6 gap-5">
+    <div className="flex flex-col mx-auto w-full max-w-md space-y-6 p-6">
       <div className="flex items-center space-x-2">
         <Image src={logo} alt="Logoipsum" width={40} height={40} className="h-6 w-40" />
       </div>
@@ -52,15 +52,15 @@ export function LoginForm() {
         <p className="text-sm text-muted-foreground">Please login here</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
         {/* Email Input */}
-        <div className="space-y-2">
+        <div className="flex flex-col justify-end space-y-2">
           <div className="relative bg-white">
             <Input 
               id="email"
               type="email"
               placeholder="robertallen@example.com"
-              className="h-12 bg-input py-3 px-3" // Added vertical padding
+              className="h-12 bg-input py-4" 
               {...register("email")}
             />
             <div className="absolute left-3 top-1 text-[#0a2463] font-medium text-sm">
@@ -79,7 +79,7 @@ export function LoginForm() {
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="••••••••••••"
-              className="h-12 pt-10 pb-12" // Added vertical padding
+              className="h-12 py-5" // Added vertical padding
               {...register("password")}
             />
             <div className="absolute left-3 top-1 text-[#0a2463] font-medium text-sm">

@@ -1,26 +1,19 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import "@/app/globals.css"
+"use client";
 
-interface RootLayoutProps {
+import "@/app/globals.css";
+
+export default function DashboardLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
-  )
+    <html>
+      <body>
+            <main className="w-full h-full">
+              {children}
+            </main>
+      </body>
+    </html>
+  );
 }

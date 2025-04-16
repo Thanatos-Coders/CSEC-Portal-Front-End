@@ -3,6 +3,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
+import "@/app/globals.css";
 
 export default function DashboardLayout({
   children,
@@ -17,7 +18,7 @@ export default function DashboardLayout({
             <AppSidebar />
             <main className="w-full h-full">
               <div className="flex space-x-6 items-center ">
-                <SidebarTrigger style={{ marginLeft: "3px" }} />
+                <SidebarTrigger style={{ marginLeft: "10px" }} />
                 <Navbar name="Henok" />
               </div>
               {children}
