@@ -1,8 +1,10 @@
 "use client";
 
 import * as React from "react";
-import DownArrow from "@/public/img/DownArrow.png";
-import Img from "next/image";
+import DownArrow from"@public/img/DownArrow.png";
+  
+
+import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
@@ -40,7 +42,7 @@ export default function DropDownMenu() {
             </div>
 
             <div className="flex items-center" style={{padding: "4px"}}>
-              <Img src={DownArrow} alt="down arrow" width={20} height={20} />
+              <Image src={DownArrow} alt="down arrow" width={20} height={20} />
             </div>
           </div>
         </Button>
