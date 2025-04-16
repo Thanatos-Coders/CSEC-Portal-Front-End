@@ -3,6 +3,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
+import "@/app/globals.css";
 
 export default function DashboardLayout({
   children,
