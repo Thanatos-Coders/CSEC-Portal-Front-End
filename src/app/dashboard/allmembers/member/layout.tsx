@@ -1,5 +1,5 @@
-import { ProfileHeader } from "@/components/ProfileHeader";
-import { ProfileSidebar } from "@/components/ProfileSidebar";
+import { ProfileHeader } from "@/components/pages/allmembers/profiles/ProfileHeader";
+import { ProfileSidebar } from "@/components/pages/allmembers/profiles/ProfileSidebar";
 
 export default function UserLayout({
   children,
