@@ -10,8 +10,6 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="h-full">
         <SidebarProvider>
           <div className="flex flex-row min-h-screen w-full">
             <AppSidebar />
@@ -24,7 +22,5 @@ export default function DashboardLayout({
             </div>
           </div>
         </SidebarProvider>
-      </body>
-    </html>
   );
 }

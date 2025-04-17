@@ -93,7 +93,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <div className="flex h-full p-2">
       <Sidebar {...props} collapsible="offcanvas" className="p-6">
-        <div className="flex flex-col gap-20 bg-[#34495E0D] rounded-2xl w-58 h-auto">
+        <div className="flex flex-col gap-5 bg-[#34495E0D] rounded-2xl w-58 h-auto">
           <div>
             <SidebarHeader className="p-7">
               <div className="flex items-center justify-center gap-2">
