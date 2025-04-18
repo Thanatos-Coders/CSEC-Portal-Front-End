@@ -93,10 +93,6 @@ const sampleMembers: Member[] = [
 ];
 
 export default function ExampleUsage() {
-  const [activeItem, setActiveItem] = useState("All Members");
-  const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
-
   // handlers
   const handleSearch = (value: string) => {
     setSearchQuery(value);
