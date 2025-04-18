@@ -93,9 +93,10 @@ const sampleMembers: Member[] = [
 ];
 
 export default function ExampleUsage() {
+  const [currentPage, setCurrentPage] = useState(1);
+
   // handlers
   const handleSearch = (value: string) => {
-    setSearchQuery(value);
     console.log("Searching for:", value);
   };
 
