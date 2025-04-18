@@ -25,35 +25,67 @@ export function Resources() {
   ];
 
   return (
-    <div className="flex flex-col gap-8" style={{ marginTop: "10px", marginBottom: "10px" }}>
-      <div className="flex">
-        <span className="w-96 text-sm font-medium text-gray-500">Resource Name</span>
+    <div className="flex flex-col my-8">
+      <div className="flex space-y-2">
+        <span className="w-86 text-sm font-medium text-gray-500">
+          Resource Name
+        </span>
         <span className="text-sm font-medium text-gray-500">Link</span>
       </div>
-      <div className="flex gap-2">
-        <span className="font-medium w-95">Data science & AI challenges</span>
-        <span className=" font-medium w-100">https://googlecodejam.com/challenges</span>
-        <a href="http://https://googlecodejam.com/challenges" target="_blank"><LuExternalLink /></a>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium w-95">Math-based programming problems</span>
-        <span className="font-medium w-100">https://googlecodejam.com/challenges</span>
-        <a href="http://https://googlecodejam.com/challenges" target="_blank"><LuExternalLink /></a>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium w-95">Cybersecurity & hacking challenges</span>
-        <span className=" font-medium w-100">https://googlecodejam.com/challenges</span>
-        <a href="http://https://googlecodejam.com/challenges" target="_blank"><LuExternalLink /></a>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium w-95">Smart contract security challenges</span>
-        <span className=" font-medium w-100">https://googlecodejam.com/challenges</span>
-        <a href="http://https://googlecodejam.com/challenges" target="_blank"><LuExternalLink /></a>
-      </div>
-      <div className="flex justify-between">
-        <span className="font-medium w-95">CP contests for beginners & intermediates</span>
-        <span className=" font-medium w-100">https://googlecodejam.com/challenges</span>
-        <a href="http://https://googlecodejam.com/challenges" target="_blank"><LuExternalLink /></a>
+      <div className="flex flex-col gap-8">
+        <div className="flex gap-2">
+          <span className="font-medium w-95">Data science & AI challenges</span>
+          <span className=" font-medium w-100">
+            https://googlecodejam.com/challenges
+          </span>
+          <a href="http://https://googlecodejam.com/challenges" target="_blank">
+            <LuExternalLink />
+          </a>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-medium w-95">
+            Math-based programming problems
+          </span>
+          <span className="font-medium w-100">
+            https://googlecodejam.com/challenges
+          </span>
+          <a href="http://https://googlecodejam.com/challenges" target="_blank">
+            <LuExternalLink />
+          </a>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-medium w-95">
+            Cybersecurity & hacking challenges
+          </span>
+          <span className=" font-medium w-100">
+            https://googlecodejam.com/challenges
+          </span>
+          <a href="http://https://googlecodejam.com/challenges" target="_blank">
+            <LuExternalLink />
+          </a>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-medium w-95">
+            Smart contract security challenges
+          </span>
+          <span className=" font-medium w-100">
+            https://googlecodejam.com/challenges
+          </span>
+          <a href="http://https://googlecodejam.com/challenges" target="_blank">
+            <LuExternalLink />
+          </a>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-medium w-95">
+            CP contests for beginners & intermediates
+          </span>
+          <span className=" font-medium w-100">
+            https://googlecodejam.com/challenges
+          </span>
+          <a href="http://https://googlecodejam.com/challenges" target="_blank">
+            <LuExternalLink />
+          </a>
+        </div>
       </div>
     </div>
   );
