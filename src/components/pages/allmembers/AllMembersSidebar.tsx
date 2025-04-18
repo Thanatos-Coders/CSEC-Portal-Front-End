@@ -53,7 +53,7 @@ export function ProfileSidebar() {
         style={{ padding: "15px", paddingLeft: "20px" }}
       >
         <LinkIcon className="mr-2 h-4 w-4" />
-        Head's up!
+        Heads up!
       </Button>
     </div>
   );
