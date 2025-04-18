@@ -22,7 +22,7 @@ const attendanceData = [
   { name: 'Jun', thisYear: 85, lastYear: 62 },
 ];
 
-export default function UpcomingEvent({ title, date, badgeText }: UpcomingEventProps) {
+export default function UpcomingEvent({ title, badgeText }: UpcomingEventProps) {
   return (
     <Card className="overflow-hidden max-w-200 w-full ">
       <CardHeader className="w-full p-4">
