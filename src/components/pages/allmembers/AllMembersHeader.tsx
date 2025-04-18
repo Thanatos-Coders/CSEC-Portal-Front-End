@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function ProfileHeader() {
   return (
     <div
@@ -11,9 +13,11 @@ export function ProfileHeader() {
         <div className="relative z-10 h-full">
           <div className="absolute bottom-6 left-13 transform translate-y-1/2 flex items-end gap-4">
             <div className="flex items-center justify-center h-23 w-23 rounded-full">
-              <img
+              <Image
                 src="https://github.com/shadcn.png"
                 alt="Henok Assefa"
+                width={92} // Adjust width (23 * 4 = 92px)
+                height={92} // Adjust height (23 * 4 = 92px)
                 className="flex items-center justify-center h-23 w-23 rounded-full object-cover"
               />
             </div>
