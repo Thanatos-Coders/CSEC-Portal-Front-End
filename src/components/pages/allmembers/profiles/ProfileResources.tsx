@@ -1,29 +1,6 @@
 import { LuExternalLink } from "react-icons/lu";
 
 export function Resources() {
-  const resources = [
-    {
-      name: "Data science & AI challenges",
-      link: "https://googlecodejam.com/challenges",
-    },
-    {
-      name: "Math-based programming problems",
-      link: "https://googlecodejam.com/challenges",
-    },
-    {
-      name: "Cybersecurity & hacking challenges",
-      link: "https://googlecodejam.com/challenges",
-    },
-    {
-      name: "Smart contract security challenges",
-      link: "https://googlecodejam.com/challenges",
-    },
-    {
-      name: "CP contests for beginners & intermediates",
-      link: "https://googlecodejam.com/challenges",
-    },
-  ];
-
   return (
     <div className="flex flex-col my-8">
       <div className="flex space-y-2">
