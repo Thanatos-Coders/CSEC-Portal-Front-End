@@ -9,7 +9,7 @@ export default function UserLayout({
   return (
       <div className="flex flex-col w-full h-full gap-3">
         <ProfileHeader />
-        <div className="flex">
+        <div className="flex justify-center">
           <div>
             <ProfileSidebar />
           </div>

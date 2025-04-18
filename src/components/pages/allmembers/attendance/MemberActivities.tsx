@@ -15,8 +15,8 @@ type Activity = {
 
 export function MemberActivities() {
   return (
-    <div className="flex rounded-lg border w-full my-5">
-      <div className="min-w-181 w-full">
+    <div className="flex rounded-lg border-1 border-gray-300 w-full my-5 mr-3">
+      <div className="min-w-175 w-full">
         <ActivityTable />
       </div>
     </div>

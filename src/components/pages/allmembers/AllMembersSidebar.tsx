@@ -10,7 +10,7 @@ export function ProfileSidebar() {
   const pathname = usePathname(); // Get the current route
 
   return (
-    <div className="flex flex-col gap-2 w-50 border-1 border-gray-300 rounded-[8px]" style={{ margin: "22px" }}>
+    <div className="flex flex-col items-center gap-2 w-50 border-2 border-gray-300 rounded-[8px] mr-5 mt-5">
       <Button
         onClick={() => router.push("/dashboard/allmembers/profile")}
         className={cn(

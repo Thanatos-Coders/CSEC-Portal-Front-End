@@ -3,11 +3,11 @@ import { Card } from "@/components/ui/card"
 
 export default function HeadsUpContent() {
   return (
-    <div className="mt-6 space-y-4 max-w-2xl">
+    <div className="mt-6 space-y-4 max-w-2xl mr-12">
       {[1, 2, 3, 4].map((i) => (
-        <Card key={i} className="p-4 border-l-4 border-l-blue-500">
+        <Card key={i} className="p-4 border-l-4 border-l-blue-900">
           <div className="flex items-start gap-2">
-            <Info className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
+            <Info className="h-5 w-5 text-blue-900 mt-0.5 flex-shrink-0" />
             <div>
               <h3 className="font-medium text-sm">A Quick Heads-Up</h3>
               <p className="text-sm text-gray-600 mt-1">

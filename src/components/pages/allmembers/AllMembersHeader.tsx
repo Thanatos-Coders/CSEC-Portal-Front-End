@@ -1,10 +1,10 @@
 export function ProfileHeader() {
   return (
     <div
-      className="relative h-54 rounded-[8px] w-auto m-2"
+      className="flex justify-center relative h-54 rounded-[8px] w-full"
     >
       <div
-        className="h-52 bg-[#001C5DCC] rounded-[8px] p-3 relative w-full"
+        className="h-52 bg-[#001C5DCC] rounded-[8px] relative w-235"
         style={{ padding: "12px" }}
       >
         <div className="absolute inset-0 bg-[url('https://github.com/shadcn.png')] bg-cover bg-center blur-lg opacity-50" />

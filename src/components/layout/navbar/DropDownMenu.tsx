@@ -23,7 +23,7 @@ export default function DropDownMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="flex w-46 h-12 border-1 border-gray-200 rounded-[8px]"
+          className="flex w-46 h-12 border-1 border-gray-300 rounded-[8px]"
         >
           <div className="flex">
             <div className="flex w-auto items-center p-1">

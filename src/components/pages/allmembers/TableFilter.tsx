@@ -23,7 +23,7 @@ export function TableFilter({
     <div
       className={cn("flex justify-between items-center", className)}
     >
-      <div className="relative flex justify-center gap-1 p-2 border-1 border-gray-200 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
+      <div className="relative flex justify-center gap-1 p-2 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
         <LuSearch size={23} />
         <div>
           <Input
@@ -40,7 +40,7 @@ export function TableFilter({
 
         <div
           onClick={onFilter}
-          className="flex justify-center border-1 border-gray-200 rounded-[8px] h-12 w-23 items-center cursor-pointer hover:bg-accent/80 transition duration-200 ease-in-out"
+          className="flex justify-center border-1 border-gray-300 rounded-[8px] h-12 w-23 items-center cursor-pointer hover:bg-accent/80 transition duration-200 ease-in-out"
         >
           <FiFilter size={30} className="p-1 opacity-50" />
           <div className="pr-1">

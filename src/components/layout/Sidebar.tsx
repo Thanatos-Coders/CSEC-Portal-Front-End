@@ -29,6 +29,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { DashboardIcon } from "../icons/dashboard-icon";
+import Link from "next/link";
 
 const navigationItems = [
   {
@@ -93,14 +94,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <div className="flex h-full p-2">
       <Sidebar {...props} collapsible="offcanvas" className="p-6">
-        <div className="flex flex-col gap-5 bg-[#34495E0D] rounded-2xl w-58 h-auto">
+        <div className="flex flex-col gap-25 bg-[#34495E0D] rounded-2xl w-58 h-auto">
           <div>
             <SidebarHeader className="p-7">
               <div className="flex items-center justify-center gap-2">
                 <Img src={Logoipsum} alt="Logo icon and name" />
               </div>
             </SidebarHeader>
-            <SidebarContent className="pl-10 pt-7">
+            <SidebarContent className="pl-5 pt-7">
               <SidebarMenu className="mt-2 gap-2">
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
@@ -108,13 +109,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       asChild
                       isActive={item.isActive}
                       // Adjusted to align items consistently
-                      className="flex items-center px-4 py-2.5 gap-3"
+                      className="flex items-center px-4 py-2.5 gap-2"
                       tooltip={item.title}
                     >
-                      <a href={item.url} className="flex items-center">
-                        <item.icon className="h-5 w-5 mr-3" />
+                      <Link href={item.url} className="flex items-center">
+                        <item.icon className="h-5 w-5" />
                         <span>{item.title}</span>
-                      </a>
+                      </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
