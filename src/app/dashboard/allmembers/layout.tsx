@@ -3,11 +3,5 @@ export default function AllMembersLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className="w-full h-full">
-        {children}
-      </body>
-    </html>
-  );
+  return <div>{children}</div>;
 }

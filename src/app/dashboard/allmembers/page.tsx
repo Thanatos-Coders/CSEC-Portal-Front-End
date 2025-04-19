@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { MembersTable, type Member } from "@/components/pages/allmembers/MembersTable";
+import {
+  MembersTable,
+  type Member,
+} from "@/components/pages/allmembers/MembersTable";
 import { TableFilter } from "@/components/pages/allmembers/TableFilter";
 import { TablePagination } from "@/components/pages/allmembers/TablePagination";
 
@@ -87,17 +90,13 @@ const sampleMembers: Member[] = [
     year: "5th",
     status: "Withdrawn",
   },
-  
 ];
 
 export default function ExampleUsage() {
-  const [activeItem, setActiveItem] = useState("All Members");
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState("");
 
   // handlers
   const handleSearch = (value: string) => {
-    setSearchQuery(value);
     console.log("Searching for:", value);
   };
 
@@ -111,24 +110,17 @@ export default function ExampleUsage() {
   };
 
   return (
-    <div
-      className="flex flex-col h-full w-270 gap-4 rounded-[8px] border-1 border-gray-300"
-      style={{ padding: "10px", margin: "10px" }}
-    >
+    <div className="flex flex-col h-full min-w-240 max-w-full mr-5 my-3 gap-4 rounded-[8px] border-1 border-gray-300">
       <div className="flex">
         {/* Main Content */}
-        <div
-          className="flex-1 gap-3 flex flex-col overflow-hidden"
-          style={{ padding: "10px" }}
-        >
+        <div className="flex-1 gap-3 flex flex-col p-2">
           {/* Main Content Area */}
-          <main className="flex-1 flex flex-col gap-6 overflow-auto p-6">
+          <main className="flex-1 flex flex-col gap-6">
             {/* Filter */}
             <TableFilter
               onSearch={handleSearch}
               onFilter={handleFilter}
               placeholder="Search members..."
-              className="mb-6"
             />
             <div>
               {/* Table */}
