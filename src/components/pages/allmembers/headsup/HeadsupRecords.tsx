@@ -11,7 +11,7 @@ export default function HeadsUpContent() {
             <div>
               <h3 className="font-medium text-sm">A Quick Heads-Up</h3>
               <p className="text-sm text-gray-600 mt-1">
-                Hey everyone, just wanted to let you know I won't be joining the standup this time around. I&apos;m
+                Hey everyone, just wanted to let you know I won&apos;t be joining the standup this time around. I&apos;m
                 finishing a few cut-outs my way, and I&apos;m prioritizing some other commitments. Appreciate the
                 support and can&apos;t wait to clear you all on from the sidelines—good luck!
               </p>

@@ -14,9 +14,7 @@ interface TableFilterProps {
 }
 
 export function TableFilter({
-  onSearch,
   onFilter,
-  placeholder = "Search...",
   className,
 }: TableFilterProps) {
   return (
