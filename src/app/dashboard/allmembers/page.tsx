@@ -92,7 +92,7 @@ const sampleMembers: Member[] = [
   },
 ];
 
-export default function ExampleUsage() {
+export default function TableUsage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   // handlers

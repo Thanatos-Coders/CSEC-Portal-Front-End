@@ -47,7 +47,7 @@ const navigationItems = [
   {
     title: "All Divisions",
     icon: Layers,
-    url: "#",
+    url: "/dashboard/alldivisions",
     isActive: false,
   },
   {
@@ -93,15 +93,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <div className="flex h-full p-2">
-      <Sidebar {...props} collapsible="offcanvas" className="p-6">
-        <div className="flex flex-col gap-25 bg-[#34495E0D] rounded-2xl w-58 h-auto">
-          <div>
-            <SidebarHeader className="p-7">
-              <div className="flex items-center justify-center gap-2">
+      <Sidebar {...props} collapsible="offcanvas" className="flex justify-center my-5">
+        <div className="flex flex-col gap-5 bg-[#34495E0D] rounded-2xl w-58 h-auto">
+            <SidebarHeader className="pt-10">
+              <div className="flex items-end justify-center gap-2">
                 <Img src={Logoipsum} alt="Logo icon and name" />
               </div>
             </SidebarHeader>
-            <SidebarContent className="pl-5 pt-7">
+            <SidebarContent className="pl-8">
               <SidebarMenu className="mt-2 gap-2">
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
@@ -121,10 +120,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 ))}
               </SidebarMenu>
             </SidebarContent>
-          </div>
           <div>
             <SidebarFooter>
-              <div className="flex justify-center gap-3">
+              <div className="flex justify-center gap-3 mt-10 p-5">
                 <div className="flex gap-3 items-center justify-center">
                   <Button
                     variant="outline"
