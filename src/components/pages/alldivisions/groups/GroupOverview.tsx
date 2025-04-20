@@ -27,8 +27,8 @@ const GroupsData: Group[] = [
     members: [
       { id: 1, name: "Mohammed Sadik", speciality: "Front-End", imgUrl: "https://avatars.githubusercontent.com/u/176960856?v=4"},
       { id: 2, name: "Kiya Kebe", speciality: "Full-Stack", imgUrl: "https://media.licdn.com/dms/image/v2/D4E03AQFkoyf763lEgA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718289469344?e=2147483647&v=beta&t=qoAMCeIxXD_kTzeUZApL6qb3mFzfjmGtB6ObIeJ_5-U"},
-      { id: 3, name: "Mahelet Yared", speciality: "UI/UX Designer", imgUrl: "https://github.co/shadcn.png"},
-      { id: 4, name: "Hussen Beshier", speciality: "Back-End", imgUrl: "https://github.co/shadcn.png"},
+      { id: 3, name: "Mahelet Yared", speciality: "UI/UX Designer", imgUrl: "https://github.com/shadcn.png"},
+      { id: 4, name: "Hussen Beshier", speciality: "Back-End", imgUrl: "https://github.com/shadcn.png"},
     ],
   },
   {
@@ -36,10 +36,10 @@ const GroupsData: Group[] = [
     name: "Group 2",
     totalMembers: 15,
     members: [
-      { id: 1, name: "John Smith", speciality: "Back-End", imgUrl: "https://github.co/shadcn.png"},
-      { id: 2, name: "Estifanos Tadese", speciality: "UI/UX Designer", imgUrl: "https://github.co/shadcn.png"},
-      { id: 3, name: "Kaleb Yonatan", speciality: "Full-Stack", imgUrl: "https://github.co/shadcn.png" },
-      { id: 4, name: "Abdullah Abdulrehman", speciality: "Front-End", imgUrl: "https://github.co/shadcn.png" },
+      { id: 1, name: "John Smith", speciality: "Back-End", imgUrl: "https://github.com/shadcn.png"},
+      { id: 2, name: "Estifanos Tadese", speciality: "UI/UX Designer", imgUrl: "https://github.com/shadcn.png"},
+      { id: 3, name: "Kaleb Yonatan", speciality: "Full-Stack", imgUrl: "https://github.com/shadcn.png" },
+      { id: 4, name: "Abdullah Abdulrehman", speciality: "Front-End", imgUrl: "https://github.com/shadcn.png" },
     ],
   }
 ]
