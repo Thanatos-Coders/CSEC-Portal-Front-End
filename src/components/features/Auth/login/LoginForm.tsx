@@ -39,7 +39,7 @@ export function LoginForm() {
     }
   })
 
-  const onSubmit = () => {
+  const onSubmit = (data: FormData) => {
     router.push("/dashboard")
   }
 
