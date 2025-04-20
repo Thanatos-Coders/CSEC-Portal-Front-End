@@ -6,26 +6,30 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
 import { Collapsible, CollapsibleTrigger } from "@/components/ui/collapsible";
 import Link from "next/link";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
+// Group data model
 interface Group {
   id: number;
   name: string;
-  members: number;
+  totalMembers: number;
+  members: Members[];
 }
 
-interface Division {
+// Sample data
+interface Members {
   id: number;
   name: string;
-  totalMembers: number;
-  groups: Group[];
+  speciality: string;
+  imgUrl?: string;
 }
 
-interface DivisionCardProps {
-  division: Division;
+interface GroupCardProps {
+  division: Group;
   className?: string;
 }
 
-export default function DivisionCard({ division }: DivisionCardProps) {
+export default function GroupCard({ division }: GroupCardProps) {
   const [openGroups, setOpenGroups] = useState<Record<number, boolean>>({});
 
   const toggleGroup = (groupId: number) => {
@@ -49,12 +53,12 @@ export default function DivisionCard({ division }: DivisionCardProps) {
         </Link>
       </CardHeader>
       <div className="text-sm text-muted-foreground">
-        {division.totalMembers} Groups
+        {division.totalMembers} Members
       </div>
       <div className="flex justify-center border-b w-118 mt-1"></div>
       <CardContent className="p-0">
         <div className="space-y-1">
-          {division.groups.map((group) => (
+          {division.members.map((group) => (
             <Collapsible
               key={group.id}
               open={openGroups[group.id]}
@@ -66,15 +70,21 @@ export default function DivisionCard({ division }: DivisionCardProps) {
                   className="flex w-full justify-between p-2 font-normal"
                 >
                   <div className="flex flex-col items-start">
-                    <span>{group.name}</span>
-                    <span className="text-xs text-muted-foreground">
-                      {group.members} Members
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <Avatar className="flex items-center">
+                        <AvatarImage src={group.imgUrl} className="rounded-full"/>
+                        <AvatarFallback className="rounded-full">CN</AvatarFallback>
+                      </Avatar>
+                      <div className="flex flex-col items-start">
+                        <span>{group.name}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {group.speciality}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                   <Link href="/dashboard/alldivisions/groups">
-                    <ChevronRight
-                      className="h-4 w-4 cursor-pointer"
-                    />
+                    <ChevronRight className="h-4 w-4 cursor-pointer" />
                   </Link>
                 </Button>
               </CollapsibleTrigger>

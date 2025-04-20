@@ -1,9 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Search, Plus } from "lucide-react"
 import DivisionCardComponent from "@/components/pages/alldivisions/DivisionCard"
 
 // Division data model
@@ -69,7 +66,7 @@ const divisionsData: Division[] = [
 ]
 
 export default function DivisionsOverview() {
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery] = useState("")
 
   const filteredDivisions = divisionsData.filter((division) =>
     division.name.toLowerCase().includes(searchQuery.toLowerCase()),
