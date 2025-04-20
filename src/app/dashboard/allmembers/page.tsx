@@ -92,7 +92,11 @@ const sampleMembers: Member[] = [
   },
 ];
 
+<<<<<<< HEAD
 export default function TableUsage() {
+=======
+export default function ExampleUsage() {
+>>>>>>> MOh-Sad/csec-portal-frontend/dev
   const [currentPage, setCurrentPage] = useState(1);
 
   // handlers

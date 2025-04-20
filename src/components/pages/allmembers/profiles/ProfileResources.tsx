@@ -1,7 +1,10 @@
 import { LuExternalLink } from "react-icons/lu";
 
 export function Resources() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> MOh-Sad/csec-portal-frontend/dev
   return (
     <div className="flex flex-col my-8">
       <div className="flex space-y-2">

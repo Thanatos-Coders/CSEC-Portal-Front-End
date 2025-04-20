@@ -17,8 +17,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function DropDownMenu() {
-  const [position, setPosition] = React.useState("bottom");
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
