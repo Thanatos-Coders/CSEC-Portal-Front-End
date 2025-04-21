@@ -20,7 +20,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import DownArrow from "@/components/icons/images/DownArrow.png";
-import { Button } from "../../ui/button";
+import { Button } from "../ui/button";
 import Img from "next/image";
 
 interface TablePaginationProps {

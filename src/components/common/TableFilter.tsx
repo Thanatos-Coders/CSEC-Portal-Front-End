@@ -5,22 +5,20 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { LuSearch } from "react-icons/lu";
 import { AddMemberDialog } from "./AddMemberDialog";
+import { Button } from "../ui/button";
+import { LuImport } from "react-icons/lu";
 
 interface TableFilterProps {
   onSearch?: (value: string) => void;
   onFilter?: () => void;
   placeholder?: string;
   className?: string;
+  importButton?: boolean;
 }
 
-export function TableFilter({
-  onFilter,
-  className,
-}: TableFilterProps) {
+export function TableFilter({ onFilter, className, importButton }: TableFilterProps) {
   return (
-    <div
-      className={cn("flex justify-between items-center", className)}
-    >
+    <div className={cn("flex justify-between items-center", className)}>
       <div className="relative flex justify-center gap-1 p-2 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
         <LuSearch size={23} />
         <div>
@@ -32,6 +30,18 @@ export function TableFilter({
         </div>
       </div>
       <div className="flex gap-3">
+        {importButton && (
+          <Button
+            variant="default"
+            className="flex rounded-md bg-[#003087] text-white h-12 w-25 items-center justify-center cursor-pointer hover:bg-[#002f87a2]"
+          >
+            <div className="flex gap-1 items-center justify-center">
+              <LuImport size={50} />
+              <div>Import</div>
+            </div>
+          </Button>
+        )}
+
         <div>
           <AddMemberDialog />
         </div>
