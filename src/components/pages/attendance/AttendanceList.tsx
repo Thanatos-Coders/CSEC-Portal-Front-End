@@ -34,7 +34,7 @@ export default function AttendanceList() {
   ]
 
   return (
-    <div className="w-full">
+    <div className="w-full h-screen pl-2 overflow-y-scroll scrollbar-custom">
       <div className="space-y-4">
         {attendanceData.map((item, index) => (
           <AttendanceCard

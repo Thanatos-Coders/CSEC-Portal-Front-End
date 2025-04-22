@@ -150,8 +150,8 @@
 }
 
 .scrollbar-custom {
-  scrollbar-width: thin;
-  scrollbar-color: #003801 #f1f1f1;
+  scrollbar-width: thick;
+  scrollbar-color: #003087 #f1f1f1;
 }
 
 .scrollbar-custom::-webkit-scrollbar {
@@ -165,6 +165,6 @@
 }
 
 .scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: #003801;
+  background-color: #003087;
   border-radius: 4px;
 }

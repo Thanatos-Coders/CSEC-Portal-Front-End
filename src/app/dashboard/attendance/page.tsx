@@ -25,6 +25,7 @@ export default function TableUsage() {
             onFilter={handleFilter}
             placeholder="Search members..."
             importButton={false}
+            className="w-[98%] pl-2"
             addMembersButton={false}
           />
           <div>
