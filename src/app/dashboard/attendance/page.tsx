@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { TableFilter } from "@/components/common/TableFilter";
 import AttendanceList from "@/components/pages/attendance/AttendanceList";
 
 export default function TableUsage() {
-  const [currentPage, setCurrentPage] = useState(1);
 
   // handlers
   const handleSearch = (value: string) => {
