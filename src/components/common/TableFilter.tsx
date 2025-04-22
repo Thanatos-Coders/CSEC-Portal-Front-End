@@ -14,9 +14,10 @@ interface TableFilterProps {
   placeholder?: string;
   className?: string;
   importButton?: boolean;
+  addMembersButton?: boolean;
 }
 
-export function TableFilter({ onFilter, className, importButton }: TableFilterProps) {
+export function TableFilter({ onFilter, className, importButton = true, addMembersButton = true }: TableFilterProps) {
   return (
     <div className={cn("flex justify-between items-center", className)}>
       <div className="relative flex justify-center gap-1 p-2 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
@@ -41,11 +42,11 @@ export function TableFilter({ onFilter, className, importButton }: TableFilterPr
             </div>
           </Button>
         )}
-
+        {addMembersButton && (
         <div>
           <AddMemberDialog />
         </div>
-
+        )}
         <div
           onClick={onFilter}
           className="flex justify-center border-1 border-gray-300 rounded-[8px] h-12 w-23 items-center cursor-pointer hover:bg-accent/80 transition duration-200 ease-in-out"
