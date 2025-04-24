@@ -1,4 +1,5 @@
 import { MdAddCircleOutline } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 interface AttendanceCardProps {
   status: "Ended" | "Planned";
@@ -15,13 +16,19 @@ export default function AttendanceCard({
   date,
   groups,
 }: AttendanceCardProps) {
+  const route = useRouter();
+  const handleAttendanceClick = () => {
+    route.push("/dashboard/attendance/group");
+  };
+
+  // Determine the color based on the status
   const statusColor =
     status === "Ended"
       ? "bg-red-50 text-red-500"
       : "bg-yellow-50 text-yellow-500";
 
   return (
-    <div className="rounded-lg border border-gray-300 p-6 mb-4 w-[98%]">
+    <div className="rounded-lg border border-gray-300 p-6 mb-4 w-[98%] cursor-pointer" onClick={handleAttendanceClick}>
       <div className="flex justify-between items-start mb-3">
         <div>
           <div className="flex gap-5">
@@ -35,7 +42,7 @@ export default function AttendanceCard({
           <p className="text-sm">{description}</p>
           <p className="text-xs text-gray-500 mt-1">{date}</p>
         </div>
-        <button className="flex items-center h-7 space-x-1 bg-[#003087] text-white text-xs px-3 py-3 rounded-[8px]">
+        <button className="flex items-center h-7 space-x-1 bg-[#003087] text-white text-xs px-3 py-3 rounded-[8px] cursor-pointer">
           <MdAddCircleOutline className="h-4 w-4" />
           <span className="text-sm">Attendance</span>
         </button>

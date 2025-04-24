@@ -121,7 +121,7 @@ export default function TableUsage() {
               onSearch={handleSearch}
               onFilter={handleFilter}
               placeholder="Search members..."
-              importButton={false}
+              addMembersButton={true}
             />
             <div>
               {/* Table */}

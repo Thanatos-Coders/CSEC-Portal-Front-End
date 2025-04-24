@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import {
-  MembersTable,
-  type Member,
-} from "@/components/pages/allmembers/MembersTable";
+import { type Member } from "@/components/pages/allmembers/MembersTable";
+import AttendanceTable from "@/components/pages/attendance/AttendanceTable";
 import { TableFilter } from "@/components/common/TableFilter";
 import { TablePagination } from "@/components/common/TablePagination";
 
@@ -121,12 +119,16 @@ export default function TableUsage() {
               onSearch={handleSearch}
               onFilter={handleFilter}
               placeholder="Search members..."
-              addMembersButton={true}
-              importButton={true}
+              saveButton={true}
             />
             <div>
-              {/* Table */}
-              <MembersTable members={sampleMembers} />
+              {/* Attendance Table */}
+              <div className="grid grid-cols-3 gap-4 border-b py-3 text-sm font-medium">
+                <div>Member Name</div>
+                <div>Attendance</div>
+                <div>Excused</div>
+              </div>
+              <AttendanceTable />
 
               {/* Pagination */}
               <TablePagination

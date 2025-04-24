@@ -27,9 +27,10 @@ interface Members {
 interface GroupCardProps {
   division: Group;
   className?: string;
+  linkText?: string; 
 }
 
-export default function GroupCard({ division }: GroupCardProps) {
+export default function GroupCard({ division, linkText = "View All" }: GroupCardProps) {
   const [openGroups, setOpenGroups] = useState<Record<number, boolean>>({});
 
   const toggleGroup = (groupId: number) => {
@@ -40,22 +41,22 @@ export default function GroupCard({ division }: GroupCardProps) {
   };
 
   return (
-    <Card className="border-1 border-gray-300 rounded-[8px] p-3 dark:bg-gray-800 dark:border-gray-700 w-124 ml-1 mb-1">
+    <Card className="border-1 border-gray-300 rounded-[8px] p-3 dark:bg-gray-800 dark:border-gray-700 w-[49%] mb-1">
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-xl font-medium">{division.name}</CardTitle>
-        <Link href="/dashboard/alldivisions/groups/members">
+        <Link href="/dashboard/attendance/group/members">
           <Button
             variant="link"
             className="text-sm font-medium text-[#003087] cursor-pointer"
           >
-            View All
+            {linkText} 
           </Button>
         </Link>
       </CardHeader>
       <div className="text-sm text-muted-foreground">
         {division.totalMembers} Members
       </div>
-      <div className="flex justify-center border-b w-118 mt-1"></div>
+      <div className="flex justify-center border-b mt-1"></div>
       <CardContent className="p-0">
         <div className="space-y-1">
           {division.members.map((group) => (

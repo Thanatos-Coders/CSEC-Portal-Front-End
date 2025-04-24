@@ -15,12 +15,13 @@ interface TableFilterProps {
   className?: string;
   importButton?: boolean;
   addMembersButton?: boolean;
+  saveButton?: boolean;
 }
 
-export function TableFilter({ onFilter, className, importButton = true, addMembersButton = true }: TableFilterProps) {
+export function TableFilter({ onFilter, className, importButton = false, addMembersButton = false, saveButton = false}: TableFilterProps) {
   return (
     <div className={cn("flex justify-between items-center", className)}>
-      <div className="relative flex justify-center gap-1 p-2 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
+      <div className="flex justify-center gap-1 p-2 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
         <LuSearch size={23} />
         <div>
           <Input
@@ -31,6 +32,16 @@ export function TableFilter({ onFilter, className, importButton = true, addMembe
         </div>
       </div>
       <div className="flex gap-3">
+      {saveButton && (
+          <Button
+            variant="default"
+            className="flex rounded-md bg-[#003087] text-white h-12 w-25 items-center justify-center cursor-pointer hover:bg-[#002f87a2]"
+          >
+            <div className="flex gap-1 items-center justify-center">
+              <div className="text-lg">Save</div>
+            </div>
+          </Button>
+        )}
         {importButton && (
           <Button
             variant="default"
