@@ -1,6 +1,9 @@
+"use client";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { HeadsupDialog } from "./HeadsupDialog";
 
 // Sample data for the attendance list
 const attendanceData = [
@@ -65,10 +68,19 @@ export default function AttendanceTable() {
   >({});
 
   const handleAttendanceChange = (id: number, status: "present" | "absent") => {
-    setAttendanceStatus((prev) => ({
-      ...prev,
-      [id]: status,
-    }));
+    setAttendanceStatus((prev) => {
+      // If clicking the same status again, toggle it off (set to null)
+      if (prev[id] === status) {
+        const newStatus = { ...prev };
+        delete newStatus[id];
+        return newStatus;
+      }
+      // Otherwise set the new status
+      return {
+        ...prev,
+        [id]: status,
+      };
+    });
   };
 
   return (
@@ -86,34 +98,29 @@ export default function AttendanceTable() {
             <span>{member.name}</span>
           </div>
           <div className="flex items-center justify-end gap-4">
-            <Button
-              size="sm"
-              variant={
+          <button
+              className={
                 attendanceStatus[member.id] === "present"
-                  ? "default"
-                  : "outline"
+                  ? "bg-green-500 text-white px-3 py-[2px] rounded-2xl"
+                  : "border-1 border-gray-300 px-3 py-[2px] rounded-2xl"
               }
               onClick={() => handleAttendanceChange(member.id, "present")}
             >
               Present
-            </Button>
-            <Button
-              size="sm"
-              variant={
-                attendanceStatus[member.id] === "absent" ? "default" : "outline"
+            </button>
+            <button
+              className={
+                attendanceStatus[member.id] === "absent"
+                  ? "bg-red-500 text-white px-3 py-[2px] rounded-2xl"
+                  : "border-1 border-gray-300 px-3 py-[2px] rounded-2xl"
               }
               onClick={() => handleAttendanceChange(member.id, "absent")}
             >
               Absent
-            </Button>
+            </button>
           </div>
-          <div>
-            <Button
-              size="sm"
-              className="bg-[#003087] hover:bg-[#002f87a2] text-white"
-            >
-              Heads Up
-            </Button>
+          <div className="flex justify-end pr-10">
+            <HeadsupDialog />
           </div>
         </div>
       ))}

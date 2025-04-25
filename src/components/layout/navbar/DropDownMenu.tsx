@@ -44,7 +44,7 @@ export default function DropDownMenu() {
           </div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-50">
         <DropdownMenuLabel></DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup>

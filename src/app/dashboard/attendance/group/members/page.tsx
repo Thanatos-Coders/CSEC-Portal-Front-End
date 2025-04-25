@@ -111,7 +111,7 @@ export default function TableUsage() {
     <div className="flex flex-col h-full min-w-240 max-w-full mr-5 my-3 gap-4 rounded-[8px] border-1 border-gray-300">
       <div className="flex">
         {/* Main Content */}
-        <div className="flex-1 gap-3 flex flex-col p-2">
+        <div className="flex-1 gap-3 flex flex-col p-2 m-3">
           {/* Main Content Area */}
           <main className="flex-1 flex flex-col gap-6">
             {/* Filter */}
@@ -123,10 +123,10 @@ export default function TableUsage() {
             />
             <div>
               {/* Attendance Table */}
-              <div className="grid grid-cols-3 gap-4 border-b py-3 text-sm font-medium">
+              <div className="grid grid-cols-3 gap-4 border-b py-3 text-sm font-medium justify-end text-gray-500">
                 <div>Member Name</div>
-                <div>Attendance</div>
-                <div>Excused</div>
+                <div className="flex justify-end pr-10">Attendance</div>
+                <div className="flex justify-end pr-15">Excused</div>
               </div>
               <AttendanceTable />
 

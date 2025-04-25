@@ -56,7 +56,7 @@ const navigationItems = [
   {
     title: "Sessions & Events",
     icon: Calendar,
-    url: "/dashboard/sessions",
+    url: "/dashboard/session-and-event",
   },
   {
     title: "Resources",
@@ -92,9 +92,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   
   return (
     <div className="flex h-full p-2">
-      <Sidebar {...props} collapsible="offcanvas" className="flex justify-center my-5">
+      <Sidebar {...props} collapsible="offcanvas" className="flex justify-center">
         <div className="flex flex-col gap-5 bg-[#34495E0D] rounded-2xl w-58 h-auto">
-          <SidebarHeader className="pt-10">
+          <SidebarHeader className="pt-5">
             <div className="flex items-end justify-center gap-2">
               <Img src={Logoipsum} alt="Logo icon and name" />
             </div>

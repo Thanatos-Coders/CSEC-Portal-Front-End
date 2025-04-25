@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { LuSearch } from "react-icons/lu";
 import { GoBell } from "react-icons/go";
 import DropDownMenu from "./DropDownMenu";
+import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   name: string;
@@ -13,6 +14,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ name, time }: NavbarProps) {
+  const pathname = usePathname();
   const getTimeOfDay = () => {
     if (time) return time;
     const hour = new Date().getHours();
@@ -21,26 +23,51 @@ export default function Navbar({ name, time }: NavbarProps) {
     return "evening";
   };
 
+  // Determine the greeting based on the route
+  const getGreeting = () => {
+    if (pathname === '/dashboard/allmembers') {
+      return (
+        <>
+          <h1 className="text-lg font-semibold">All Members</h1>
+          <h3 className="text-sm text-gray-600">All Members Information</h3>
+        </>
+      );
+    } else if (pathname === '/dashboard/alldivisions') {
+      return (
+        <>
+          <h1 className="text-lg font-semibold">All Divisions</h1>
+          <h3 className="text-sm text-gray-600">All Divisions Information</h3>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <div className="flex gap-1">
+            <h1 className="text-lg font-semibold">Hello {name}</h1>
+            <Image
+              src={ShakeHand}
+              alt="Handshake icon"
+              width={25}
+              height={25}
+            />
+          </div>
+          <h3 className="text-sm text-gray-600">Good {getTimeOfDay()}</h3>
+        </>
+      );
+    }
+  };
+
   return (
     <div className="flex h-20 w-full mr-3 justify-between items-center p-2">
-      <div className="pl-1 ">
+      <div className="pl-1">
         <div className="flex gap-3">
           <div>
-            <div className="flex gap-1">
-              <h1 className="text-lg font-semibold">Hello {name}</h1>
-              <Image
-                src={ShakeHand}
-                alt="Handshake icon"
-                width={25}
-                height={25}
-              />
-            </div>
-            <h3 className="text-sm text-gray-600">Good {getTimeOfDay()}</h3>
+            {getGreeting()}
           </div>
         </div>
       </div>
 
-      <div className="flex gap-3 w-auto justify-center items-center ">
+      <div className="flex gap-3 w-auto justify-center items-center">
         <div className="flex justify-center gap-1 border-1 border-gray-300 rounded-[8px] h-12 items-center focus:outline-blue-600 focus:border-blue-600">
           <LuSearch size={45} className="p-3"/>
           <div>

@@ -35,11 +35,11 @@ export function LoginForm() {
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      remember: false,
+      rememberMe: false,
     },
   });
 
-  const remember = watch("remember");
+  const remember = watch("rememberMe");
 
   const onSubmit = async (data: FormData) => {
     setLoginError(null);
@@ -59,9 +59,6 @@ export function LoginForm() {
         <Image
           src={logo}
           alt="Logoipsum"
-          width={40}
-          height={40}
-          className="h-6 w-40"
         />
       </div>
 
@@ -83,7 +80,7 @@ export function LoginForm() {
               id="email"
               type="email"
               placeholder="robertallen@example.com"
-              className={`transition-all duration-200 bg-input p-4 ${
+              className={`transition-all duration-200 p-4 rounded-xl border-1 border-gray-300 ${
                 emailFocused ? "h-16" : "h-12"
               }`}
               {...register("email")}
@@ -108,7 +105,7 @@ export function LoginForm() {
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="••••••••••••"
-              className={`transition-all duration-200 py-5 ${
+              className={`transition-all duration-200 py-5 rounded-xl border-1 border-gray-300 ${
                 passwordFocused ? "h-16" : "h-12"
               }`}
               {...register("password")}
@@ -150,7 +147,7 @@ export function LoginForm() {
             id="remember"
             checked={remember}
             onCheckedChange={(checked) =>
-              setValue("remember", Boolean(checked))
+              setValue("rememberMe", Boolean(checked))
             }
           />
           <Label

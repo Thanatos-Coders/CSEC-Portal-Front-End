@@ -6,12 +6,6 @@ import amico from"@/components/icons/images/CalendarIcon.jpg"
 import Image from"next/image"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-interface UpcomingEventProps {
-  title: string
-  date: string
-  badgeText: string
-}
-
 // Sample data for the chart
 const attendanceData = [
   { name: 'Jan', thisYear: 65, lastYear: 45 },
@@ -22,27 +16,25 @@ const attendanceData = [
   { name: 'Jun', thisYear: 85, lastYear: 62 },
 ];
 
-export default function UpcomingEvent({ title, badgeText }: UpcomingEventProps) {
+export default function UpcomingEvent() {
   return (
-    <Card className="overflow-hidden max-w-200 w-full ">
+    <Card className="overflow-hidden w-full">
       <CardHeader className="w-full p-4">
-        <div className="bg-blue-400 p-3 relative max-w-200 w-auto h-60 rounded-2xl">
-          <Badge className="absolute right-4 top-4 hover:bg-blue-600">{badgeText}</Badge>
-          <div className="absolute w-18 h-5 top-2 right-2 bg-[#ff5c5c] text-white text-xs font-medium px-2 py-0.5 rounded-full">
+        <div className="bg-blue-400 p-5 relative w-auto h-60 rounded-2xl">
+          <div className="absolute w-19 h-5 top-5 right-5 bg-[#ff5c5c] text-white text-xs font-medium px-2 py-0.5 rounded-full">
             Members
           </div>
           <h2 className="text-xl font-bold mb-1">Upcoming Event</h2> 
-          <p className="text-base my-4">Cross-division knowledge-sharing</p> 
+          <p className="text-base my-5 max-w-50">Cross-division knowledge-sharing</p> 
           <div className="flex flex-col gap-1">
-            <h3 className="text-blue-800 font-medium">{title}</h3>
-            <div className="flex items-end gap-2 mt-11 ml-6">
-              <Button variant="default" className="bg-blue-800 w-28 h-12 hover:bg-blue-900 text-white rounded-[10px]">
+            <div className="flex items-end gap-2 mt-11 ml-6 mb-2">
+              <Button variant="default" className="bg-[#003087] w-28 h-12 hover:bg-[#002f87b7] text-white rounded-[10px]">
                 Add to calendar
               </Button>
             </div>
           </div>
 
-          <div className="absolute right-6 bottom-2">
+          <div className="absolute right-23 bottom-10">
             <Image src={amico} alt="Event illustration" className="h[60] w-[120]" />
           </div>
         </div>

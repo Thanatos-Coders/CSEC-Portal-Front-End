@@ -60,7 +60,7 @@ export default function SessionCalendar() {
   ]
 
   return (
-    <div className="space-y-4 border-1 border-gray-300 rounded-xl p-5">
+    <div className="space-y-4 border-1 border-gray-300 rounded-xl p-5 mt-3 w-full max-w-100 h-fit mr-3">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <h3 className="text-lg font-semibold">Session</h3>

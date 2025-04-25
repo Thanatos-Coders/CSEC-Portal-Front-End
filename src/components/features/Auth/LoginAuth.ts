@@ -3,9 +3,11 @@
 import { FormData } from "@/components/features/Validation/LoginValidate";
 
 export async function handleLogin(data: FormData) {
+  const API_URL = `${process.env.NEXT_PUBLIC_API_ENDPOINT}auth/login`;
+
   try {
     const response = await fetch(
-      "https://29aa-196-189-233-4.ngrok-free.app/api/user/login",
+      API_URL,
       {
         method: "POST",
         headers: {
@@ -23,18 +25,20 @@ export async function handleLogin(data: FormData) {
 
     localStorage.setItem("token", responseData.token);
     localStorage.setItem("user", JSON.stringify(responseData.user));
-    
-    return { 
+
+    console.log(responseData.user.role)
+    return {
       success: true,
-      data: responseData 
+      data: responseData,
     };
   } catch (error) {
     console.log("Login failed:", error);
     return {
       success: false,
-      error: error instanceof Error 
-        ? error.message 
-        : "Login failed. Please try again."
+      error:
+        error instanceof Error
+          ? error.message
+          : "Login failed. Please try again.",
     };
   }
 }
