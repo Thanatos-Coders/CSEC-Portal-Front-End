@@ -12,6 +12,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { Pencil, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export interface Member {
   id: string;
@@ -28,11 +30,20 @@ interface MembersTableProps {
 }
 
 export function MembersTable({ members, className }: MembersTableProps) {
+  const router = useRouter();
+
+  const handleEdit = (memberId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    console.log("Edit member:", memberId);
+  };
+
+  const handleDelete = (memberId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    console.log("Delete member:", memberId);
+  };
+
   return (
-    <div
-      className={cn("rounded-lg border overflow-hidden", className)}
-      style={{ padding: "10px", margin: "5px" }}
-    >
+    <div className={cn("rounded-lg border overflow-hidden", className)}>
       <Table>
         <TableHeader>
           <TableRow>
@@ -41,22 +52,20 @@ export function MembersTable({ members, className }: MembersTableProps) {
             <TableHead className="text-gray-500">Attendance</TableHead>
             <TableHead className="text-gray-500">Year</TableHead>
             <TableHead className="text-gray-500">Status</TableHead>
+            <TableHead className="text-gray-500 text-center">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {members.map((member) => (
             <TableRow
               key={member.id}
+              className="cursor-pointer hover:bg-gray-50"
               onClick={() => {
-                const router = useRouter();
-                router.push(`/dashboard/allmembers/member`);
+                router.push(`/dashboard/allmembers/profile`);
               }}
             >
               <TableCell>
-                <div
-                  className="flex items-center gap-3"
-                  style={{ padding: "10px" }}
-                >
+                <div className="flex items-center gap-3 p-1">
                   <Avatar>
                     <AvatarImage
                       src={
@@ -90,6 +99,26 @@ export function MembersTable({ members, className }: MembersTableProps) {
                 >
                   {member.status}
                 </Badge>
+              </TableCell>
+              <TableCell>
+                <div className="flex justify-center">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={(e) => handleEdit(member.id, e)}
+                  >
+                    <Pencil className="h-4 w-4 text-gray-500" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={(e) => handleDelete(member.id, e)}
+                  >
+                    <Trash2 className="h-4 w-4 text-red-500" />
+                  </Button>
+                </div>
               </TableCell>
             </TableRow>
           ))}
